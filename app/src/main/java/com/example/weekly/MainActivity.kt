@@ -14,7 +14,7 @@ import com.example.weekly.databinding.ActivityMainBinding
 
 // hello guys XD
 // carrots was here 10.19.21
-// wassup
+// wassup1
 
 class MainActivity : AppCompatActivity() {
 
