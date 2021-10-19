@@ -4,7 +4,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".FirstFragment">
+
+    <!-- Start of Commit #1 Basic Inputs -->
+
+    <EditText
+        android:id="@+id/task_title"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/task_title"
+        android:importantForAutofill="no"
+        android:inputType="textCapCharacters"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/weight"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/task_title" />
+
+    <TextView
+        android:id="@+id/priority_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_priority"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weight" />
+
+    <RadioGroup
+        android:id="@+id/priority_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/no_priority"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priority_question">
+
+        <RadioButton
+            android:id="@+id/no_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_priority" />
+
+        <RadioButton
+            android:id="@+id/with_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/with_priority" />
+
+        <RadioButton
+            android:id="@+id/set_before"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_before" />
+
+        <RadioButton
+            android:id="@+id/set_after"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_after" />
+
+        <RadioButton
+            android:id="@+id/set_specific"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_specifically" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="@id/btnUpdate"
+        app:layout_constraintEnd_toStartOf="@id/btnUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priority_options" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        app:layout_constraintBottom_toBottomOf="@id/btnDelete"
+        app:layout_constraintEnd_toStartOf="@id/btnDelete"
+        app:layout_constraintStart_toEndOf="@id/btnSave"
+        app:layout_constraintTop_toBottomOf="@id/priority_options" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="@id/btnView"
+        app:layout_constraintEnd_toStartOf="@id/btnView"
+        app:layout_constraintStart_toEndOf="@id/btnUpdate"
+        app:layout_constraintTop_toBottomOf="@id/priority_options" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view"
+        app:layout_constraintBottom_toBottomOf="@id/btnDelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnDelete"
+        app:layout_constraintTop_toBottomOf="@id/priority_options" />
+
+    <!-- End of Commit #1 Basic Inputs -->
 
     <TextView
         android:id="@+id/textview_first"
@@ -14,7 +128,7 @@
         app:layout_constraintBottom_toTopOf="@id/button_first"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/priority_options" />
 
     <Button
         android:id="@+id/button_first"

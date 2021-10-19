@@ -7,6 +7,21 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_first_fragment">Ignore Me</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Strings used for Commit #1 Basic Layout -->
+    <string name="task_title">Task Title</string>
+    <string name="weight">Weight</string>
+    <string name="task_priority">What is the priority of this task?</string>
+    <string name="no_priority">No Priority</string>
+    <string name="with_priority">With Priority</string>
+    <string name="set_before">Set Before:</string>
+    <string name="set_after">Set After:</string>
+    <string name="set_specifically">Set Specifically On:</string>
+    <string name="save">Save</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="view">View</string>
+
 </resources>
