@@ -13,7 +13,7 @@ import com.example.weekly.databinding.ActivityMainBinding
 
 
 // hello guys XD
-//wassup
+//wassupp
 
 class MainActivity : AppCompatActivity() {
 
